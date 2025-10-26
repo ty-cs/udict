@@ -19,7 +19,7 @@ const (
 	colorBlue    = "4"
 	colorMagenta = "5"
 	colorCyan    = "6"
-	colorWhite   = "7"
+	colorWhite   = "15"
 )
 
 func StyleDefinition(response api.Response, limit int) string {
