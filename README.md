@@ -2,7 +2,12 @@
 
 A command-line tool to fetch definitions from Urban Dictionary directly from your terminal.
 
-`udict` is a simple and efficient tool for getting definitions from Urban Dictionary, with styled output for easy reading.
+`udict` is a simple and efficient tool for getting definitions from Urban Dictionary, with styled output for easy
+reading.
+
+## Demo
+
+![udict Screenshot](assets/screenshot.png)
 
 ## Installation
 
