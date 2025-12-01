@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"runtime/debug"
 
 	"github.com/spf13/cobra"
 )
@@ -12,7 +13,17 @@ var versionCmd = &cobra.Command{
 	Short: "Print the version number of udict",
 	Long:  `All software has versions. This is udict's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("udict v1.0.0")
+		info, ok := debug.ReadBuildInfo()
+		if !ok {
+			fmt.Println("udict version unknown (built without Go modules)")
+			return
+		}
+
+		var (
+			version = info.Main.Version
+		)
+		// print version details
+		fmt.Printf("udict version: %s\n", version)
 	},
 }
 
